@@ -6,6 +6,9 @@ import  rootReducers  from './reducers';
 import todos from './reducers/todos'
 import AppComponent from './components/AppComponent'
 
+//react
+import A from './react/ref';
+
 //creating store
 const store = createStore(rootReducers);
 
@@ -18,5 +21,6 @@ const subs = () => {
 store.subscribe(subs);
 
 
+render(<A/>, document.getElementById('app'));
 
-render(<AppComponent store={store}/>, document.getElementById('app'));
+//render(<AppComponent store={store}/>, document.getElementById('app'));
